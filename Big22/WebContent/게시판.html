@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+    <style>
+        input[type="text"] {
+            background: silver;
+        }
+        
+        input[type="submit"] {
+            background: gold;
+        }
+        
+        input[type="submit"]:hover {
+            box-shadow: 5px 5px darkgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="bbs.jsp">
+        <table>
+            <tr>
+                <td align="right">아이디 :</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td align="right">제목 :</td>
+                <td><input type="text" name="title"></td>
+            </tr>
+            <tr>
+                <td align="right">내용 :</td>
+                <td><input type="text" name="content"></td>
+            </tr>
+            <tr>
+                <td align="right">작성자 :</td>
+                <td><input type="text" name="writer"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="작성"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

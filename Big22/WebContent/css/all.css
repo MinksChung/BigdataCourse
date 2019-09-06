@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+
+/* 자동주석 : ctrl + shift + / */
+/* 선택 -> 스타일 여러개 지정 */
+body {
+
+    background: slategrey;
+    color: cornsilk;
+
+}
+
+h3 {
+
+    background: rgb(99, 116, 133);
+    color: rgb(253, 249, 230);
+
+}
+
+h4 {
+
+    background: rgb(76, 94, 112);
+    color: rgb(255, 252, 242);
+
+}
+
+h5 {
+
+    background: rgb(45, 64, 83);
+    color: rgb(252, 251, 249);
+
+}

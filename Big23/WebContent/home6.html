@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // // 함수 정의
+        // function call() {
+        //     alert("call함수 호출");
+        // }
+
+        // function call2() {
+        //     alert("call2함수 호출");
+        // }
+
+        // function call3() {
+        //     alert("call3함수 호출");
+        //     call2();
+        // }
+
+        // function call4(x, y) {
+        //     var sum = x + y;
+        //     console.log(sum);
+        // }
+
+        // // 함수 호출(사용)
+        // call();
+        // call3();
+        // call4(100, 200);
+
+        var price = 5000;
+        var count = parseInt(prompt("갯수"));
+
+        function coffee(p, c) {
+            var mul = p * c;
+            return mul;
+        }
+
+        var result2 = coffee(price, count);
+
+        if (result2 > 20000) {
+            console.log(result2 - 5000);
+        } else {
+            console.log(result2);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <form action="member.jsp" method="GET">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/test.js"></script>
+    <script>
+        var name = prompt("이름");
+        var tel = prompt("전화번호");
+        alert(name + " " + tel);
+    </script>
+
+</head>
+
+<body>
+    <form action="input.jsp">
+        내용 <input type="text" name="content" id="content">
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <form action="">
+        정수1 <input type="text" name="num1" id="num1"><br> 정수2 <input type="text" name="num2" id="num2"><br>
+        <button type="button" onclick="sum()">더하기</button>
+        <button type="button" onclick="sub()">빼애기</button>
+        <button type="button" onclick="mul()">곱하기</button>
+        <button type="button" onclick="div()">나누기</button>
+    </form>
+    <hr>
+    <form action="">
+        계산 <input type="text" name="cnt" id="cnt" value="0"><br>
+        <button type="button" onclick="plus()">+</button>
+        <button type="button" onclick="minus()">-</button>
+        <button type="reset">0</button>
+    </form>
+    <hr>
+    <button type="button" onclick="naver()">네이버</button>
+    <button type="button" onclick="daum()">다음</button>
+    <button type="button" onclick="google()">구글</button>
+</body>
+
+</html>

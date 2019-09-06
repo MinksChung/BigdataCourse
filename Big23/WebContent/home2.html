@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /* alert("경고 의미, 밥을 꼭 먹자!");
+                                                                        var result = confirm("밥을 먹었나요?");
+                                                                        alert("확인결과" + result);
+                                                                        var data = prompt(" 당신이 사용하고 있는 언어의 이름은?");
+                                                                        alert(data);
+                                                                        console.log("언어의 이름은" + data); */
+
+        function member() {
+            alert("함수 호출");
+            console.log("함수 호출");
+        }
+
+        function server() {
+            location.href = "http://www.naver.com";
+            console.log("서버로 전송");
+        }
+
+        function daum() {
+            location.href = "http://www.daum.net";
+            console.log("다음으로");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <form action="member.jsp" method="GET">
+        아이디 : <input type="text" name="id"><br /> 비밀번호 : <input type="password" name="pw"><br /> 이름 : <input type="text" name="name"><br /> 이메일 : <input type="text" name="email"><br />
+        <button type="button" onclick="member()">가입</button>
+        <button type="button" onclick="server()">전송</button>
+        <button type="button" onclick="daum()">다음</button>
+    </form>
+</body>
+
+</html>

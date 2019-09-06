@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        body {
+            color: darkgrey
+        }
+        
+        input {
+            background: yellow;
+            color: blue;
+        }
+        
+        input[type="submit"] {
+            background: silver;
+        }
+        
+        input[type="submit"]:hover {
+            background: gold;
+            width: 150px;
+            height: 50px;
+            box-shadow: 20px 20px dimgray;
+        }
+        
+        a:link {
+            background: darkblue;
+            color: antiquewhite;
+        }
+        
+        a:hover {
+            background: violet;
+            text-decoration: underline;
+        }
+        
+        a:visited {
+            color: red;
+            box-shadow: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="member2.jsp">
+        <table>
+            <tr>
+                <td align="right">아이디 :</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td align="right">비밀번호 :</td>
+                <td><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <td align="right">이름 :</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td align="right">전화번호 :</td>
+                <td><input type="text" name="tel"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="가입"></td>
+            </tr>
+        </table>
+    </form>
+
+    <a href="http://www.naver.com">네이버</a> <br />
+    <a href="http://www.idonknow.com">몰라사이트</a>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        var array = [1, 2, 3];
+        for (var i = 0; i < array.length; i++) {
+            console.log(i + ": " + array[i]);
+        }
+
+        var array2 = new Array();
+        for (var i = 0; i < 3; i++) {
+            array2[i] = prompt("값 입력");
+        }
+        for (var i = 0; i < 3; i++) {
+            console.log(i + ": " + array2[i]);
+        }
+
+        var array3 = ["사과", 1000, "서대문구"];
+        for (var i = 0; i < array3.length; i++) {
+            console.log(i + ": " + array3[i]);
+        }
+
+        var arr = new Array();
+        var i = 0;
+
+        function call() {
+            arr[i] = document.getElementById("num").value;
+            document.getElementById("p").innerText = arr[i];
+            document.getElementById("p2").innerHTML = "<font color=red>" + arr[i] + "</font>"
+            i++;
+
+            for (let index = 0; index < array.length; index++) {
+                console.log(arr[index]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    숫자 입력 <input type="text" name="num" id="num"><br>
+    <button type="button" onclick="call()">숫자 배열에 추가</button>
+    <p id="p"></p>
+    <p id="p2"></p>
+
+</body>
+
+</html>

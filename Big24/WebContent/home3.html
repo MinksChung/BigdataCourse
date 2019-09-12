@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style></style>
+    <script>
+    	function call() {
+    		var data1 = document.getElementById("id").value;
+    		var data2 = document.getElementById("pw").value;
+    	    var data_length = data1.length;
+    	    alert(data_length);
+    	    if (data_length>=5) {
+				location.href = "server.jsp?id="+data1+"&pw="+data2;
+			}else{
+				alert("아이디가 4자리 이하입니다.");
+				location.href = "home3.html"				
+			}
+		}
+    </script>
+</head>
+
+<body>
+
+    <form action="server.jsp">
+        아이디 <input type="text" name="id" id="id" value=""><br>
+        패스워드 <input type="password" name="pw" id="pw" value=""><br>
+        <button type="button" onclick="call()">아이디 길이</button>
+    </form>
+
+</body>
+
+</html>

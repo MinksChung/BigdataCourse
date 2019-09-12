@@ -1,0 +1,10 @@
+@charset "UTF-8";
+button {
+    background: silver;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: gold;
+    transition: all 10s linear;
+}

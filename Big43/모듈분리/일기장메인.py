@@ -1,0 +1,1 @@
+from pac1.게시판 import *

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movieList">
+
+	<select id="select" parameterType="mlDTO" resultMap="rs">
+		SELECT * FROM movieList WHERE id = #{id}
+	</select>
+
+	<resultMap type="mlDTO" id="rs">
+		<result property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="director" column="director" />
+		<result property="content" column="content" />
+		<result property="posterImg" column="posterImg" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="rs">
+		SELECT * FROM movieList
+	</select>
+
+	<insert id="insert" parameterType="mlDTO">
+		INSERT INTO movieList VALUES(#{id},#{title},#{director},#{content},#{posterImg})
+	</insert>
+
+	<update id="update" parameterType="mlDTO">
+		UPDATE movieList SET title=#{title}, director=#{director}, content=#{content}, posterImg=#{posterImg} WHERE id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="mlDTO">
+		DELETE FROM movieList WHERE id = #{id}
+	</delete>
+
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<select id="select" parameterType="memDTO" resultMap="rs">
+		SELECT * FROM member2 WHERE id = #{id}
+	</select>
+
+	<resultMap type="memDTO" id="rs">
+		<result property="id" column="id" />
+		<result property="pw" column="pw" />
+		<result property="name" column="name" />
+		<result property="tel" column="tel" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="rs">
+		SELECT * FROM member2
+	</select>
+
+	<insert id="insert" parameterType="memDTO">
+		INSERT INTO member2 VALUES(#{id},#{pw},#{name},#{tel})
+	</insert>
+
+	<update id="update" parameterType="memDTO">
+		UPDATE member2 SET pw=#{pw}, name=#{name}, tel=#{tel} WHERE	id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="memDTO">
+		DELETE FROM member2 WHERE id = #{id}
+	</delete>
+
+</mapper>

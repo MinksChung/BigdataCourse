@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="productFinal">
+
+	<select id="select" parameterType="pfDTO" resultMap="rs">
+		SELECT * FROM productfinal WHERE id = #{id}
+	</select>
+
+	<resultMap type="pfDTO" id="rs">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="content" column="content" />
+		<result property="price" column="price" />
+		<result property="img" column="img" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="rs">
+		SELECT * FROM productfinal
+	</select>
+
+	<insert id="insert" parameterType="pfDTO">
+		INSERT INTO productfinal VALUES(#{id},#{name},#{content},#{price},#{img})
+	</insert>
+
+	<update id="update" parameterType="pfDTO">
+		UPDATE productfinal SET name=#{name}, content=#{contnet}, price=#{price}, img=#{img} WHERE id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="pfDTO">
+		DELETE FROM productfinal WHERE id = #{id}
+	</delete>
+
+</mapper>

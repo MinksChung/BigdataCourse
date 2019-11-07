@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <script src="/static/js/jquery-3.4.1.js"></script>
+    <!--CDN 방식-->
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+    <!--static 활용-->
+    <!--<script src="{% static 'js/jquery-3.4.1.js' %}"></script>-->
+    <script type="text/javascript">
+        $(function(){
+<!--            alert('페이지 로딩')-->
+            $('#btn1').click(function(){
+                alert('장고를 환영합니다!')
+            })
+
+            $('#btn2').click(function(){
+                alert('이제 시작입니다!')
+            })
+        })
+    </script>
+    <meta charset="UTF-8">
+    <title>loginOk</title>
+</head>
+<body bgcolor="aqua">
+로그인Ok
+<br>
+당신의 id는 {{request.session.mid}}입니다.<br>
+<a href="sessionOff">세션종료</a><br>
+<a href="login">로그인 화면으로</a><br>
+
+<a href="start">인스타 시작 페이지로</a><br>
+<a href="home">홈1 페이지로</a>
+<a href="login">insta 로그인화면으로</a><br>
+<a href="/">메인으로</a><br>
+</body>
+</html>

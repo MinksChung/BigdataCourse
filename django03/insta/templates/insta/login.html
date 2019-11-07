@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="/static/css/astyle.css">
+    <script src="/static/js/jquery-3.4.1.js"></script>
+    <!--CDN 방식-->
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+    <!--static 활용-->
+    <!--<script src="{% static 'js/jquery-3.4.1.js' %}"></script>-->
+    <script type="text/javascript">
+        $(function(){
+<!--            alert('페이지 로딩')-->
+            $('#btn1').click(function(){
+                alert('장고를 환영합니다!')
+            })
+
+            $('#btn2').click(function(){
+                alert('이제 시작입니다!')
+            })
+        })
+    </script>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+로그인이다
+<br>
+    {% if request.session.mid != null %}
+        {{request.session.mid}}님이 로그인 되어있습니다.<br>
+        <a href="sessionOff">세션종료</a><br>
+    {% else %}
+        손님입니다<br>
+        <form action="process" method="post">
+        {% csrf_token %}
+        아이디<input type="text" name = 'mid'><br>
+        패스워드<input type="text" name = 'pw'><br>
+        <input type="submit" value="로그인 처리"><br>
+        </form>
+    {% endif %}
+<button type="button" id="btn1">클릭클릭1</button><br>
+<button type="button" id="btn2">클릭클릭2</button><br>
+<a href="start">인스타 시작 페이지로</a><br>
+<a href="home">홈1 페이지로</a><br>
+<a href="/">메인으로</a><br>
+<img src="https://car-images.bauersecure.com/pagefiles/84674/1040x0/bmw_i8_hybrid_car.jpg?scale=down">
+</body>
+</html>

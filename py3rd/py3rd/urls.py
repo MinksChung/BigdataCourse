@@ -23,6 +23,7 @@ import user.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', user.views.login_test),
+    path('mypage/mypost',user.views.signin),
 ]
 
 if settings.DEBUG:

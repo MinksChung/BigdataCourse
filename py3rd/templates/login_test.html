@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="login_test" method="post">
-id:<input type="text" name="id">
+<form action="mypage/mypost" method="post">
+        {% csrf_token %}
+id:<input type="text" name="uid">
 pw:<input type="text" name="pw">
 <input type="submit" value="click">
 </form>

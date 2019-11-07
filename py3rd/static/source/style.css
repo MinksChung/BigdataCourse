@@ -1,0 +1,30 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#bg-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 450px;
+    height: 200px;
+    font-size: 30px;
+    color: #FFF;
+    text-indent: -999em;
+}
+
+#common_head {
+    margin-left: 1200px;
+    width: 800px;
+    height: 200px;
+    margin-bottom: 300px;
+}
+
+#button_color {
+    background-color: #3D01E1;
+    color:white;
+    margin-right: 20px;
+    margin-top: 80px;
+}
